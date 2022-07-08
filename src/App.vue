@@ -1,26 +1,36 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <img src="@/assets/images/logo.svg" alt="" class="mx-auto mt-20" />
+  <tip-calculator class="mt-20 bg-brand-white h-full" />
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import TipCalculator from "@/components/TipCalculator.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    TipCalculator,
   },
 };
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Space Mono", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  @apply bg-brand-light-grayish-cyan absolute top-0 w-full;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 </style>
